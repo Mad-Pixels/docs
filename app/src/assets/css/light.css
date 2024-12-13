@@ -1,0 +1,42 @@
+[data-theme="light"] {
+  /* Main text colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  
+  /* Main background colors */
+  --background-primary: #ffffff;
+  --background-secondary: #f8f8f8;
+  --background-hover: #f0f0f0;
+  --background-active: #e8e8e8;
+  --background-active-hover: #e0e0e0;
+  --background-primary-rgb: 255, 255, 255;
+  
+  /* Accent colors */
+  --accent-color: #2563eb;
+  --accent-color-light: #3b82f6;
+  --accent-color-dark: #1d4ed8;
+  --accent-color-contrast: #ffffff;
+  --accent-color-opacity: rgba(37, 99, 235, 0.1);
+  
+  /* System colors */
+  --error-color: #dc2626;
+  --success-color: #16a34a;
+  --warning-color: #ca8a04;
+  --info-color: #0891b2;
+  
+  /* Borders and shadows */
+  --border-color: #e5e7eb;
+  --card-border: #e5e7eb;
+  --card-background: #ffffff;
+  --card-background-hover: #f8f8f8;
+  --card-shadow: var(--shadow-md);
+  --card-shadow-hover: var(--shadow-lg);
+  
+  /* Actions */
+  --hover-color: var(--accent-color-dark);
+  --disable-color: #d1d5db;
+  
+  /* State colors */
+  --text-hover: var(--accent-color);
+  --text-active: var(--accent-color);
+}

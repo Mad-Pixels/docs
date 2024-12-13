@@ -1,0 +1,74 @@
+{
+  "theme": {
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "language": {
+    "select": "Select language",
+    "current": "Current language"
+  },
+  "notFound": {
+    "description": "Page not found",
+    "link": "Back to main"
+  },
+  "external_menu": {
+    "title": "External links",
+    "links": [
+      {
+        "path": "https://github.com/Mad-Pixels",
+        "label": "Github",
+        "icon": "github"
+      },
+      {
+        "path": "https://t.me/madpixels_community",
+        "label": "Telegram",
+        "icon": "telegram"
+      }
+    ]
+  },
+  "internal_menu": {
+    "title": "Sections",
+    "links": [
+      {
+        "path": "/",
+        "label": "Main",
+        "icon": "home"
+      },
+      {
+        "path": "/applingo",
+        "label": "AppLingo",
+        "icon": "briefcase",
+        "children": [
+          {
+            "path": "/applingo/betatesting",
+            "label": "Beta Test",
+            "icon": "security"
+          }
+        ]
+      },
+      {
+        "path": "/contribute",
+        "label": "Contribute",
+        "icon": "folder"
+      }
+    ]
+  },
+  "send_message": {
+    "title": "Contact me",
+    "name": "First name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Submit",
+    "errors": {
+      "title": "Error",
+      "name_required": "Field is required",
+      "email_required": "Email is required",
+      "email_invalid": "Please enter a valid email",
+      "send_error": "Something went wrong. Please try again later"
+    },
+    "success": {
+      "title": "Thank you!",
+      "message": "Your application has been submitted successfully."
+    }
+  }
+}
