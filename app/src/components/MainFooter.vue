@@ -3,7 +3,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-info">
-          <p class="copyright">&copy; {{ currentYear }} Mr.Chelyshkin</p>
+          <p class="copyright">&copy; {{ currentYear }} MadPixels</p>
         </div>
         <div class="footer-links">
           <a
