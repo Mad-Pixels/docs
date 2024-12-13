@@ -1,3 +1,23 @@
+<!-- 
+  <ImageLoader
+    src="/path/to/image.jpg"
+    alt="description"
+  />
+  <ImageLoader
+    src="/path/to/image.jpg"
+    alt="description"
+    :minHeight="300"
+  />
+
+  <PageGrid 
+    :number-of-columns="2" 
+    :proportions="[2, 1]"
+    alignment="inward"
+  >
+    <div>...</div>
+  </PageGrid>
+-->
+
 <template>
   <div 
     class="image-wrapper" 

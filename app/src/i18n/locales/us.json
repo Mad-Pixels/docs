@@ -54,7 +54,8 @@
     ]
   },
   "send_message": {
-    "title": "Contact me",
+    "title": "Contact us",
+    "title_betatest": "Become a tester",
     "name": "First name",
     "email": "Email",
     "message": "Message",

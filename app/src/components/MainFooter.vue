@@ -39,7 +39,7 @@ const { t } = useI18n()
 const currentYear = new Date().getFullYear()
 
 const navLinks = computed(() => {
-  return [0, 1, 2, 3].map(index => ({
+  return [0, 1].map(index => ({
     path: t(`external_menu.links.${index}.path`),
     icon: t(`external_menu.links.${index}.icon`)
   }))
