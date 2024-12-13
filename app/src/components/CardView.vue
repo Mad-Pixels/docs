@@ -64,17 +64,6 @@ defineProps({
   transition: opacity var(--transition-duration-base) var(--transition-timing);
 }
 
-.card:hover {
-  border-color: var(--accent-color);
-  background: var(--card-background-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-}
-
-.card:hover::before {
-  opacity: 1;
-}
-
 .card-header {
   display: flex;
   align-items: center;
@@ -91,16 +80,6 @@ defineProps({
   border-radius: var(--border-radius-md);
   color: var(--accent-color);
   transition: all var(--transition-duration-base) var(--transition-timing);
-}
-
-.card:hover .icon-wrapper {
-  background: var(--accent-color);
-  color: var(--accent-color-contrast);
-  transform: scale(1.05);
-}
-
-.card:hover .main-icon {
-  color: #fff;
 }
 
 .card-title {
@@ -162,11 +141,6 @@ defineProps({
   transition: all var(--transition-duration-base) var(--transition-timing);
 }
 
-.card:hover .arrow-wrapper {
-  opacity: 1;
-  transform: translateX(0);
-}
-
 @media (max-width: 768px) {
   .card {
     padding: var(--spacing-lg);
@@ -193,9 +167,5 @@ defineProps({
   .card-body :deep(li::before) {
     left: var(--spacing-sm);
   }
-}
-
-[data-theme="dark"] .card:hover {
-  box-shadow: var(--shadow-lg-dark);
 }
 </style>

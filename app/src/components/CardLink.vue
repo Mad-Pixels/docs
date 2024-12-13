@@ -1,3 +1,13 @@
+
+<!-- 
+  <CardLink
+    icon="icon"
+    title="title"
+    description="Description"
+    url="url"
+  /> 
+-->
+
 <template>
   <a :href="url" class="card" target="_blank" rel="noopener noreferrer">
     <div class="card-icon">
@@ -56,6 +66,10 @@ defineProps({
   background: var(--card-background-hover);
   box-shadow: var(--shadow-lg);
   transform: translateY(-2px);
+}
+
+.card:hover .main-icon {
+  color: #fff;
 }
 
 .card-icon {
