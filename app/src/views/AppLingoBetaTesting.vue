@@ -1,13 +1,13 @@
 <template>
-  <PageWrapper>
+  <PageWrapper>  
     <component :is="currentLocaleContent" />
     <section class="section">
       <PageGrid 
         :number-of-columns="2" 
-        :proportions="[1, 3]"
+        :proportions="[3, 1]"
         alignment="inward"
       >
-        <template #column-1>
+        <template #column-2>
           <HideMobile>
             <ImageWrapper 
               :src="logoSrc"
@@ -15,9 +15,9 @@
             />
           </HideMobile>
         </template>
-        <template #column-2>
+        <template #column-1>
           <div class="form-content">
-            <h2 class="section-title">{{ t('send_message.title_betatest') }}</h2>
+            <h2 id="beta-form" class="section-title">{{ t('send_message.title_betatest') }}</h2>
             <FormGrid
               :fields="formFields" 
               :maxColumns=2
