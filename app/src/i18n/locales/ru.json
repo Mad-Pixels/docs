@@ -1,0 +1,75 @@
+{
+  "theme": {
+    "light": "Светлая тема",
+    "dark": "Темная тема"
+  },
+  "language": {
+    "select": "Выбрать язык",
+    "current": "Текущий язык"
+  },
+  "notFound": {
+    "description": "Страница не найдена",
+    "link": "Вернуться на главную"
+  },
+  "external_menu": {
+    "title": "Внешние ссылки",
+    "links": [
+      {
+        "path": "https://github.com/Mad-Pixels",
+        "label": "Github",
+        "icon": "github"
+      },
+      {
+        "path": "https://t.me/madpixels_community",
+        "label": "Telegram",
+        "icon": "telegram"
+      }
+    ]
+  },
+  "internal_menu": {
+    "title": "Разделы",
+    "links": [
+      {
+        "path": "/",
+        "label": "Главная",
+        "icon": "home"
+      },
+      {
+        "path": "/applingo",
+        "label": "AppLingo",
+        "icon": "briefcase",
+        "children": [
+          {
+            "path": "/applingo/betatesting",
+            "label": "Бета Тестирование",
+            "icon": "security"
+          }
+        ]
+      },
+      {
+        "path": "/contribute",
+        "label": "Внести вклад",
+        "icon": "folder"
+      }
+    ]
+  },
+  "send_message": {
+    "title": "Связаться с нами",
+    "title_betatest": "Присоедениться к тестированию",
+    "name": "Имя",
+    "email": "Email",
+    "message": "Сообщение",
+    "submit": "Submit",
+    "errors": {
+      "title": "Ошибка",
+      "name_required": "Поле обязательно для заполнения",
+      "email_required": "Email обязателен для заполнения",
+      "email_invalid": "Пожалуйста, введите корректный email",
+      "send_error": "Что-то пошло не так. Пожалуйста, попробуйте позже"
+    },
+    "success": {
+      "title": "Спасибо!",
+      "message": "Ваша заявка успешно отправлена"
+    }
+  }
+}
