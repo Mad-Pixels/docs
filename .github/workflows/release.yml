@@ -11,7 +11,7 @@ jobs:
     with:
       terraform_command: plan
       working_directory: "terraform/provisioners/infra/"
-      environment: terraform-prod
+      environment: terraform
     secrets:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
       aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
