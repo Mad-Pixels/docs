@@ -9,9 +9,6 @@ jobs:
   deploy:
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@dev
     with:
-      backend_region: ${{ secrets.AWS_BACKEND_REGION }}
-      backend_bucket: ${{ secrets.AWS_BACKEND_BUCKET }}
-      backend_key: ${{ secrets.AWS_SECRET_KEY }}
       terraform_command: plan
       working_directory: "terraform/provisioners/infra/"
       terraform_vars: |
@@ -26,6 +23,9 @@ jobs:
     secrets:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
       aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
+      backend_region: ${{ secrets.AWS_BACKEND_REGION }}
+      backend_bucket: ${{ secrets.AWS_BACKEND_BUCKET }}
+      backend_key: ${{ secrets.AWS_BACKEND_KEY }}
 
   # verify:
   #   uses: Mad-Pixels/github-workflows/.github/workflows/github-check-tag.yml@main
