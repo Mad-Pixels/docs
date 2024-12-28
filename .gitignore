@@ -131,3 +131,7 @@ dist
 
 # other
 .DS_Store
+
+# terraform
+.terraform/
+.terraform.lock.hcl
