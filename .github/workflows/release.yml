@@ -11,21 +11,13 @@ jobs:
     with:
       terraform_command: plan
       working_directory: "terraform/provisioners/infra/"
+      environment: terraform-prod
     secrets:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
       aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
       backend_region: ${{ secrets.AWS_BACKEND_REGION }}
       backend_bucket: ${{ secrets.AWS_BACKEND_BUCKET }}
       backend_key: ${{ secrets.AWS_BACKEND_KEY }}
-      terraform_variables: |
-        {
-          "acm_crt": "${{ secrets.TF_VAR_ACM_CRT }}",
-          "aws_region": "${{ secrets.TF_VAR_AWS_REGION }}",
-          "cf_distribution_index": "${{ secrets.TF_VAR_CF_DISTRIBUTION_INDEX }}",
-          "domain": "${{ secrets.TF_VAR_DOMAIN }}",
-          "project": "${{ secrets.TF_VAR_PROJECT }}",
-          "s3_static_name": "${{ secrets.TF_VAR_S3_STATIC_NAME }}"
-        }
 
   # verify:
   #   uses: Mad-Pixels/github-workflows/.github/workflows/github-check-tag.yml@main
