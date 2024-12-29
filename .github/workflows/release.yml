@@ -2,21 +2,34 @@ name: Release
 
 on:
   push:
-    tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+    branches-ignore:
+      - main
+    # tags:
+    #   - "v[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
-  deploy:
-    uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@dev
+  infra:
+    uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
     with:
       terraform_command: plan
       working_directory: "terraform/provisioners/infra/"
-      environment: terraform
     secrets:
-      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY }}
-      aws_secret_access_key: ${{ secrets.AWS_SECRET_KEY }}
-      backend_region: ${{ secrets.AWS_BACKEND_REGION }}
-      backend_bucket: ${{ secrets.AWS_BACKEND_BUCKET }}
-      backend_key: ${{ secrets.AWS_BACKEND_KEY }}
-
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
+      TERRAFORM_BACKEND_REGION: ${{ secrets.AWS_BACKEND_REGION }}
+      TERRAFORM_BACKEND_BUCKET: ${{ secrets.AWS_BACKEND_BUCKET }}
+      TERRAFORM_BACKEND_KEY: ${{ secrets.AWS_BACKEND_KEY }}
       TF_VARS_JSON: ${{ secrets.TF_VARS_JSON }}
+    
+  # service:
+  #   uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
+  #   with:
+  #     terraform_command: apply
+  #     working_directory: "terraform/provisioners/service/" 
+  #   secrets:
+  #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+  #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
+  #     TERRAFORM_BACKEND_REGION: ${{ secrets.AWS_BACKEND_REGION }}
+  #     TERRAFORM_BACKEND_BUCKET: ${{ secrets.AWS_BACKEND_BUCKET }}
+  #     TERRAFORM_BACKEND_KEY: ${{ secrets.AWS_BACKEND_KEY }}
+  #     TF_VARS_JSON: ${{ secrets.TF_VARS_JSON }}
