@@ -12,6 +12,7 @@ jobs:
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
     with:
       terraform_command: plan
+      actions_verions: "0.0.1"
       working_directory: "terraform/provisioners/infra/"
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
