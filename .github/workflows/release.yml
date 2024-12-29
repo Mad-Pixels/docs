@@ -23,7 +23,7 @@ jobs:
       # TERRAFORM_BACKEND_REGION: ${{ secrets.AWS_BACKEND_REGION }}
       # TERRAFORM_BACKEND_BUCKET: ${{ secrets.AWS_BACKEND_BUCKET }}
       # TERRAFORM_BACKEND_KEY: ${{ secrets.AWS_BACKEND_KEY }}
-      #TF_VARS_JSON: ${{ secrets.TF_VARS_JSON }}
+      TF_VARS_JSON: ${{ secrets.TF_VARS_JSON }}
     
   # service:
   #   uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
