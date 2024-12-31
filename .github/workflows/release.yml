@@ -36,7 +36,7 @@ jobs:
 
   upload:
     needs: [discover]
-    uses: Mad-Pixels/github-workflows/.github/workflows/aws-s3-sync.yml@main
+    uses: Mad-Pixels/github-workflows/.github/workflows/aws-s3-sync.yml@node
     with:
       bucket_destination: ${{ secrets.DOCS_BUCKET }}
       working_directory: "dist_files"
