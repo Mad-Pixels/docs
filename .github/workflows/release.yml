@@ -13,6 +13,7 @@ jobs:
     with:
       terraform_command: apply
       actions_verions: "0.0.1"
+      terraform_workspace: "main"
       working_directory: "terraform/provisioners/infra/"
     secrets:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
