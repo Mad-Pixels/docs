@@ -13,7 +13,7 @@ resource "aws_cloudfront_distribution" "this" {
 
     content {
       error_caching_min_ttl = 30
-      error_code            = custom_error_response.key
+      error_code            = custom_error_response.value.error_code
       response_code         = custom_error_response.value.response_code
       response_page_path    = custom_error_response.value.response_page_path
     }
