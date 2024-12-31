@@ -1,11 +1,17 @@
 name: Release
 
+# on:
+#   push:
+#     branches-ignore:
+#       - main
+#     # tags:
+#     #   - "v[0-9]+.[0-9]+.[0-9]+"
+
 on:
   push:
-    branches-ignore:
-      - main
-    # tags:
-    #   - "v[0-9]+.[0-9]+.[0-9]+"
+    branches:
+      - '**'        # все ветки
+      - '!main'     # исключить main
 
 jobs:
   build:
