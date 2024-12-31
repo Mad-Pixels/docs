@@ -11,7 +11,7 @@ jobs:
   infra:
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
     with:
-      terraform_command: plan
+      terraform_command: apply
       actions_verions: "0.0.1"
       working_directory: "terraform/provisioners/infra/"
     secrets:
