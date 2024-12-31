@@ -7,6 +7,12 @@ on:
       - main 
 
 jobs:
+  build:
+    uses: Mad-Pixels/github-workflows/.github/workflows/node-build.yml@main
+    with:
+      working-directory: ./app
+      node-version: '20'
+
   plan:
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
     with:

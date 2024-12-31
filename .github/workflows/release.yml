@@ -1,30 +1,46 @@
 name: Release
-
 on:
   push:
-    branches-ignore:
-      - main
-    # tags:
-    #   - "v[0-9]+.[0-9]+.[0-9]+"
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 jobs:
+  # verify:
+  #   uses: Mad-Pixels/github-workflows/.github/workflows/github-check-tag.yml@main
+
   build:
     uses: Mad-Pixels/github-workflows/.github/workflows/node-build.yml@node
     with:
       working-directory: ./app
       node-version: '20'
-      
-  # infra:
-  #   uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
-  #   with:
-  #     terraform_command: apply
-  #     actions_verions: "0.0.1"
-  #     terraform_workspace: "main"
-  #     working_directory: "terraform/provisioners/infra/"
-  #   secrets:
-  #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
-  #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
-  #     TF_BACKEND_JSON: ${{ secrets.TF_BACKEND_JSON }}
-  #     TF_VARS_JSON: ${{ secrets.TF_VARS_JSON }}
-    
-  
+
+  discover:
+    needs: [build]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Create working directory
+        run: mkdir -p dist_files
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: vue-dist
+          path: dist_files
+
+      - name: Upload working directory
+        uses: actions/upload-artifact@v4
+        with:
+          name: files-to-sync
+          path: dist_files
+          retention-days: 1
+
+  upload:
+    needs: [discover]
+    uses: Mad-Pixels/github-workflows/.github/workflows/aws-s3-sync.yml@main
+    with:
+      bucket_destination: ${{ secrets.DOCS_BUCKET }}
+      working_directory: "dist_files"
+      actions_verions: "0.0.1"
+    secrets:
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
