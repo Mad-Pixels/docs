@@ -30,20 +30,20 @@ jobs:
       TF_VARS_JSON: ${{ secrets.TF_VARS_JSON }}
 
   discover:
-    needs: [build]
+    needs: [apply]
     runs-on: ubuntu-24.04
     steps:
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: atrifacts
+          name: artifacts
           path: dist_files
 
   upload:
     needs: [discover, apply]
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-s3-sync.yml@main
     with:
-      artifacts: "atrifacts"
+      artifacts: "artifacts"
       working_directory: "dist_files"
       actions_verions: "0.0.1"
     secrets:
