@@ -1,3 +1,11 @@
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Mad-Pixels/.github/raw/main/profile/banner.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/Mad-Pixels/.github/raw/main/profile/banner.png">
+    <img
+        alt="MadPixels"
+        src="https://github.com/Mad-Pixels/.github/raw/main/profile/banner.png">
+</picture>
+
 # app
 
 This template should help get you started developing with Vue 3 in Vite.
