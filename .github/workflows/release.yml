@@ -9,12 +9,14 @@ jobs:
     uses: Mad-Pixels/github-workflows/.github/workflows/github-check-tag.yml@main
 
   build:
+    needs: [verify]
     uses: Mad-Pixels/github-workflows/.github/workflows/node-build.yml@main
     with:
       working-directory: ./app
       node-version: '20'
 
   apply:
+    needs: [build]
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-terraform.yml@main
     with:
       terraform_command: apply
@@ -38,7 +40,7 @@ jobs:
           path: dist_files
 
   upload:
-    needs: [discover]
+    needs: [discover, apply]
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-s3-sync.yml@main
     with:
       artifacts: "dist"
