@@ -36,14 +36,14 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
-          name: dist
+          name: atrifacts
           path: dist_files
 
   upload:
     needs: [discover, apply]
     uses: Mad-Pixels/github-workflows/.github/workflows/aws-s3-sync.yml@main
     with:
-      artifacts: "dist"
+      artifacts: "atrifacts"
       working_directory: "dist_files"
       actions_verions: "0.0.1"
     secrets:
