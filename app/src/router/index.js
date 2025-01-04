@@ -21,23 +21,23 @@ const redirectRoutes = [
   },
   {
     path: '/contribute/github-workflows',
-    redirect: `/${DEFAULT_LOCALE}`
+    redirect: `/${DEFAULT_LOCALE}/contribute/github-workflows`
   },
   {
     path: '/contribute/ci-actions',
-    redirect: `/${DEFAULT_LOCALE}`
+    redirect: `/${DEFAULT_LOCALE}/contribute/ci-actions`
   },
   {
     path: '/contribute/wf',
-    redirect: `/${DEFAULT_LOCALE}` 
+    redirect: `/${DEFAULT_LOCALE}/contribute/wf` 
   },
   {
     path: '/applingo/about',
-    redirect: `/${DEFAULT_LOCALE}`
+    redirect: `/${DEFAULT_LOCALE}/applingo/about`
   },
   {
     path: '/applingo/betatesting',
-    redirect: `/${DEFAULT_LOCALE}`
+    redirect: `/${DEFAULT_LOCALE}/applingo/betatesting`
   }
 ]
 
