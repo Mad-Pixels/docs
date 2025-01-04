@@ -1,3 +1,8 @@
+<!-- 
+  <CardsGrid :max-cards="3" gap="var(--spacing-lg)"></CardsGrid>
+  <CardsGrid auto-fit min-card-width="250px"></CardsGrid> 
+-->
+
 <template>
   <form @submit.prevent="handleSubmit" class="form-grid">
     <div

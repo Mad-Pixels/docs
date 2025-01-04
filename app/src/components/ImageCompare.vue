@@ -1,3 +1,13 @@
+<!-- 
+<ImageCompare
+  before-src="/content/applingo-about/2_black.svg"
+  after-src="/content/applingo-about/2_white.svg"
+  before-alt="dark"
+  after-alt="light"
+  :min-height="320"
+/> 
+-->
+
 <template>
   <div 
     ref="container"
