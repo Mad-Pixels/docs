@@ -8,16 +8,20 @@
       </template>
       <template #column-2>
         <div class="content">
-          <h1>MadPixels Community Docs</h1>
+          <h1>AppLingo iOS App</h1>
           <p>
-            Here you'll find documentation, examples, and tips for working with our tools. 
-            We're developing this space to share knowledge and encourage open dialogue. 
-            Learn, share, suggest — together we'll make technology simpler and more accessible!
+            An iOS app for learning foreign words using flashcards. 
+            Users can create their own dictionaries, add words with translations and hints, 
+            and import ready-made word sets. 
+          </p>
+          <p>
+            Mini-games are available to enhance memorization efficiency.
           </p>
         </div>
       </template>
     </PageGrid>
   </section>  
+  
 </template>
 
 <script setup>
