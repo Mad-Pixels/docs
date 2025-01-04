@@ -161,10 +161,10 @@
 </template>
 
 <script setup>
-  import PageWrapper from '@/components/PageWrapper.vue'
-  import ImageWrapper from '@/components/ImageWrapper.vue'
-  import PageGrid from '@/components/PageGrid.vue'
-  import CardsGrid from '@/components/CardsGrid.vue'
-  import CardText from '@/components/CardText.vue'
-  import CardView from '@/components/CardView.vue'
+import PageWrapper from '@/components/PageWrapper.vue'
+import ImageWrapper from '@/components/ImageWrapper.vue'
+import PageGrid from '@/components/PageGrid.vue'
+import CardsGrid from '@/components/CardsGrid.vue'
+import CardText from '@/components/CardText.vue'
+import CardView from '@/components/CardView.vue'
 </script>

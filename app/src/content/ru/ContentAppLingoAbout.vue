@@ -3,7 +3,7 @@
     <PageGrid :number-of-columns="2" :proportions="[1, 2]" alignment="inward">
       <template #column-1>
         <div class="content">
-          <ImageWrapper src="/logo/main-white.png" alt="MadPixels" style="width:100%; max-width:200px;"/>
+          <ImageWrapper :src="logoSrc" alt="AppLingo" style="width:100%; max-width:200px;"/>
         </div>
       </template>
       <template #column-2>
@@ -19,3 +19,17 @@
     </PageGrid>
   </section>  
 </template>
+
+<script setup>
+import { ref, computed } from 'vue'
+import { useThemeStore } from '@/stores/theme'
+
+import PageGrid from '@/components/PageGrid.vue'
+import ImageWrapper from '@/components/ImageWrapper.vue'
+
+const themeStore = useThemeStore()
+
+const logoSrc = computed(() => {
+  return themeStore.isDarkTheme ? '/content/applingo_black.jpg' : '/content/applingo_white.jpg'
+}) 
+</script>

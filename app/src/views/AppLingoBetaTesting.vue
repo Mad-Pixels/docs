@@ -83,7 +83,7 @@ const currentLocaleContent = computed(() => {
 
 const logoSrc = computed(() => {
   return themeStore.isDarkTheme ? '/content/applingo_black.jpg' : '/content/applingo_white.jpg'
-})
+}) 
 
 const validateForm = () => {
   errors.value = {};
