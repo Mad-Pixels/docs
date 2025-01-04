@@ -31,8 +31,8 @@
 </template>
 
 <script setup>
-import PageGrid from '@/components/PageGrid.vue'
-import CardLink from '@/components/CardLink.vue'
-import CardsGrid from '@/components/CardsGrid.vue'
-import ImageWrapper from '@/components/ImageWrapper.vue'
+  import PageGrid from '@/components/PageGrid.vue'
+  import CardLink from '@/components/CardLink.vue'
+  import CardsGrid from '@/components/CardsGrid.vue'
+  import ImageWrapper from '@/components/ImageWrapper.vue'
 </script>

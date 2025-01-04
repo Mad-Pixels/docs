@@ -18,18 +18,8 @@
       </template>
     </PageGrid>
   </section>  
-  <section class="section">
-    <CardsGrid auto-fit min-card-width="320px">
-      <CardLink
-        icon="bug"
-        title="Beta Testing"
-        description="Take part in AppLingo beta testing"
-        url="applingo/betatesting"
-      />
-    </CardsGrid> 
-  </section>
 </template>
-  
+
 <script setup>
   import PageGrid from '@/components/PageGrid.vue'
   import CardLink from '@/components/CardLink.vue'
