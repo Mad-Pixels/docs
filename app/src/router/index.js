@@ -5,7 +5,10 @@ import LocaleWrapper from '../components/LocaleWrapper.vue'
 
 import ContentMain from '@/views/MainView.vue'
 import AppLingoBetaTesting from '@/views/AppLingoBetaTesting.vue'
-import ContentContribute from '@/content/ru/ContentContribute.vue'
+import AppLingoAbout from '@/views/AppLingoAbout.vue'
+import ContributeGitHubWorkflows from '@/views/ContributeGitHubWorkflows.vue'
+import ContributeCiActions from '@/views/ContributeCiActions.vue'
+import ContributeWf from '@/views/ContributeWf.vue'
 
 const redirectRoutes = [
   {
@@ -14,6 +17,22 @@ const redirectRoutes = [
   },
   {
     path: '/contribute',
+    redirect: `/${DEFAULT_LOCALE}`
+  },
+  {
+    path: '/contribute/github-workflows',
+    redirect: `/${DEFAULT_LOCALE}`
+  },
+  {
+    path: '/contribute/ci-actions',
+    redirect: `/${DEFAULT_LOCALE}`
+  },
+  {
+    path: '/contribute/wf',
+    redirect: `/${DEFAULT_LOCALE}` 
+  },
+  {
+    path: '/applingo/about',
     redirect: `/${DEFAULT_LOCALE}`
   },
   {
@@ -45,19 +64,43 @@ const routes = [
         }
       },
       {
-        path: 'contribute',
-        name: 'contribute',
-        component: ContentContribute,
-        meta: {
-          title: 'Contribute'
-        }
-      },
-      {
         path: 'applingo/betatesting',
         name: 'betatesting',
         component: AppLingoBetaTesting,
         meta: {
           title: 'AppLingo BetaTesting'
+        }
+      },
+      {
+        path: 'applingo/about',
+        name: 'applingo-about',
+        component: AppLingoAbout,
+        meta: {
+          title: 'Applingo About'
+        }
+      },
+      {
+        path: 'contribute/github-workflows',
+        name: 'github-workflows',
+        component: ContributeGitHubWorkflows,
+        meta: {
+          title: 'Github Workflows'
+        }
+      },
+      {
+        path: 'contribute/ci-actions',
+        name: 'ci-actions',
+        component: ContributeCiActions,
+        meta: {
+          title: 'Ci Actions'
+        }
+      },
+      {
+        path: 'contribute/wf',
+        name: 'wf',
+        component: ContributeWf,
+        meta: {
+          title: 'WF'
         }
       },
       {

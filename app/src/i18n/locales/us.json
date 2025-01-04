@@ -40,6 +40,11 @@
         "icon": "briefcase",
         "children": [
           {
+            "path": "/applingo/about",
+            "label": "About",
+            "icon": "security"
+          },
+          {
             "path": "/applingo/betatesting",
             "label": "Beta Test",
             "icon": "security"
@@ -49,7 +54,24 @@
       {
         "path": "/contribute",
         "label": "Contribute",
-        "icon": "folder"
+        "icon": "folder",
+        "children": [
+          {
+            "path": "/contribute/github-workflows",
+            "label": "GitHub Workflows",
+            "icon": "security" 
+          },
+          {
+            "path": "/contribute/ci-actions",
+            "label": "CI Actions",
+            "icon": "security" 
+          },
+          {
+            "path": "/contribute/wf",
+            "label": "WiFi Cli",
+            "icon": "security"
+          }
+        ]
       }
     ]
   },
