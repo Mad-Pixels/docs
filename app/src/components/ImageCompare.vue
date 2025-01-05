@@ -195,7 +195,7 @@ const stopDragging = () => {
   width: 2px;
   transform: translateX(-50%);
   cursor: ew-resize;
-  z-index: 10;
+  z-index: 9;
 }
 
 .image-compare__slider-line {
@@ -236,7 +236,7 @@ const stopDragging = () => {
   );
   background-size: 200% 100%;
   animation: loading 1.5s infinite linear;
-  z-index: 20;
+  z-index: 19;
 }
 
 .has-error .image-compare__placeholder {
