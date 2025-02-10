@@ -48,36 +48,20 @@
             "path": "/applingo/betatesting",
             "label": "Beta Test",
             "icon": "security"
-          }
-        ]
-      },
-      {
-        "path": "/contribute",
-        "label": "Contribute",
-        "icon": "folder",
-        "children": [
-          {
-            "path": "/contribute/github-workflows",
-            "label": "GitHub Workflows",
-            "icon": "security" 
           },
           {
-            "path": "/contribute/ci-actions",
-            "label": "CI Actions",
-            "icon": "security" 
-          },
-          {
-            "path": "/contribute/wf",
-            "label": "WiFi Cli",
+            "path": "/applingo/feedback",
+            "label": "Feedback",
             "icon": "security"
           }
         ]
       }
     ]
   },
-  "send_message": {
+  "form_data": {
     "title": "Contact us",
     "title_betatest": "Become a tester",
+    "title_feedback": "Send a feedback",
     "name": "First name",
     "email": "Email",
     "message": "Message",

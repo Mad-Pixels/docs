@@ -50,38 +50,17 @@
             "icon": "security"
           }
         ]
-      },
-      {
-        "path": "/contribute",
-        "label": "Внести вклад",
-        "icon": "folder",
-        "children": [
-          {
-            "path": "/contribute/github-workflows",
-            "label": "GitHub Workflows",
-            "icon": "security" 
-          },
-          {
-            "path": "/contribute/ci-actions",
-            "label": "CI Actions",
-            "icon": "security" 
-          },
-          {
-            "path": "/contribute/wf",
-            "label": "WiFi Cli",
-            "icon": "security"
-          }
-        ]
       }
     ]
   },
-  "send_message": {
+  "form_data": {
     "title": "Связаться с нами",
     "title_betatest": "Присоедениться к тестированию",
+    "title_feedback": "Отправить отзыв",
     "name": "Имя",
     "email": "Email",
     "message": "Сообщение",
-    "submit": "Submit",
+    "submit": "Отправить",
     "errors": {
       "title": "Ошибка",
       "name_required": "Поле обязательно для заполнения",
@@ -91,7 +70,7 @@
     },
     "success": {
       "title": "Спасибо!",
-      "message": "Ваша заявка успешно отправлена"
+      "message": "Ваш запрос успешно отправлен"
     }
   }
 }

@@ -9,6 +9,7 @@ import AppLingoAbout from '@/views/AppLingoAbout.vue'
 import ContributeGitHubWorkflows from '@/views/ContributeGitHubWorkflows.vue'
 import ContributeCiActions from '@/views/ContributeCiActions.vue'
 import ContributeWf from '@/views/ContributeWf.vue'
+import AppLingoFeedback from '@/views/AppLingoFeedback.vue'
 
 const redirectRoutes = [
   {
@@ -38,6 +39,10 @@ const redirectRoutes = [
   {
     path: '/applingo/betatesting',
     redirect: `/${DEFAULT_LOCALE}/applingo/betatesting`
+  },
+  {
+    path: '/applingo/feedback',
+    redirect: `/${DEFAULT_LOCALE}/applingo/feedback`
   }
 ]
 
@@ -77,6 +82,14 @@ const routes = [
         component: AppLingoAbout,
         meta: {
           title: 'Applingo About'
+        }
+      },
+      {
+        path: 'applingo/feedback',
+        name: 'applingo-feedback',
+        component: AppLingoFeedback,
+        meta: {
+          title: 'Applingo Feedback'
         }
       },
       {
