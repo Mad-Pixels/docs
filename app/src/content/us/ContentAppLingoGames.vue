@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <!-- <section class="section">
     <PageGrid :number-of-columns="2" :proportions="[1, 2]" alignment="inward">
       <template #column-1>
         <div class="content">
@@ -20,16 +20,16 @@
         </div>
       </template>
     </PageGrid>
-  </section>
-  <h2 class="section-title">Mini-Games</h2>
+  </section> -->
+  <h1 class="section-title">Mini-Games</h1>
   <section class="section">
     <PageGrid :number-of-columns="3" vertical-alignment="top" :proportions="[1, 1, 1]" alignment="center">
       <template #column-1>
         <div style="text-align: left;">
           <div style="display: flex; justify-content: center;">
             <ImageCompare
-              before-src="/content/applingo-about/1_black.svg"
-              after-src="/content/applingo-about/1_white.svg"
+              before-src="/content/applingo-game/1_black.svg"
+              after-src="/content/applingo-game/1_white.svg"
               before-alt="dark"
               after-alt="light"
               
@@ -56,8 +56,8 @@
         <div style="text-align: left;">
           <div style="display: flex; justify-content: center;">
             <ImageCompare
-              before-src="/content/applingo-about/2_black.svg"
-              after-src="/content/applingo-about/2_white.svg"
+              before-src="/content/applingo-game/2_black.svg"
+              after-src="/content/applingo-game/2_white.svg"
               before-alt="dark"
               after-alt="light"
             
@@ -84,8 +84,8 @@
         <div style="text-align: left;">
           <div style="display: flex; justify-content: center;"> 
             <ImageCompare
-              before-src="/content/applingo-about/3_black.svg"
-              after-src="/content/applingo-about/3_white.svg"
+              before-src="/content/applingo-game/3_black.svg"
+              after-src="/content/applingo-game/3_white.svg"
               before-alt="dark"
               after-alt="light"
               
@@ -116,7 +116,7 @@
   <section class="section">
     <PageGrid :number-of-columns="2" :proportions="[1, 2]" alignment="outward">
       <template #column-1>
-        <ImageWrapper src="/content/applingo-about/4.svg" alt="TestFlight" style="width: 100%;max-width: 320px;"/>
+        <ImageWrapper src="/content/applingo-game/4.svg" alt="TestFlight" style="width: 100%;max-width: 320px;"/>
       </template>
       <template #column-2 >
         <div style="width: 100%;text-align: left;">
