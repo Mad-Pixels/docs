@@ -34,13 +34,11 @@
       <h2 class="section-title">Как стать бета-тестером</h2>
       <CardsGrid auto-fit min-card-width="320px">
         <CardView title="1. Заполните заявку" icon="form">
-          <p>
-            <ul class="styled-ul">
-              <li>Укажите ваше имя</li>
-              <li>Предоставьте действующий email</li>
-              <li>Опишите, почему хотите участвовать в тестировании</li>
-            </ul>
-          </p>
+          <ul class="styled-ul">
+            <li>Укажите ваше имя</li>
+            <li>Предоставьте действующий email</li>
+            <li>Опишите, почему хотите участвовать в тестировании</li>
+          </ul>
           <a href="#beta-form" class="nav-link">
             Заполнить заявку
           </a>

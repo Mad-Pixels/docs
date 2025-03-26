@@ -1,5 +1,5 @@
 <!-- 
-  <PageGrid :number-of-columns="2">
+  <PageGrid :number-of-columns="2" vertical-alignment="top">
     <template #column-1>
       column-1
     </template>
@@ -45,6 +45,11 @@ const ALIGNMENT = {
   INWARD: 'inward',
   OUTWARD: 'outward'
 };
+
+const VERTICAL_ALIGNMENT = {
+  TOP: 'top',
+  CENTER: 'center'
+};
 </script>
 
 <script setup>
@@ -67,14 +72,20 @@ const props = defineProps({
   },
   alignment: {
     type: String,
-    default: 'center',
-    validator: (value) => ['center', 'inward', 'outward'].includes(value)
+    default: ALIGNMENT.CENTER,
+    validator: (value) => Object.values(ALIGNMENT).includes(value)
+  },
+  verticalAlignment: {
+    type: String,
+    default: VERTICAL_ALIGNMENT.CENTER,
+    validator: (value) => Object.values(VERTICAL_ALIGNMENT).includes(value)
   }
 });
 
 const gridStyles = computed(() => ({
   '--column-gap': props.columnGap,
-  '--columns-count': props.numberOfColumns
+  '--columns-count': props.numberOfColumns,
+  '--vertical-align': props.verticalAlignment === VERTICAL_ALIGNMENT.TOP ? 'flex-start' : 'center'
 }));
 
 const getColumnStyles = (columnIndex) => {
@@ -102,7 +113,7 @@ const getColumnStyles = (columnIndex) => {
 
 .grid-wrapper {
   display: flex;
-  align-items: stretch;
+  align-items: var(--vertical-align);
   gap: var(--column-gap);
   width: 100%;
   min-height: 100%;
@@ -111,7 +122,7 @@ const getColumnStyles = (columnIndex) => {
 
 .grid-column {
   display: flex;
-  align-items: center;
+  align-items: var(--vertical-align);
   min-width: 0; 
 }
 

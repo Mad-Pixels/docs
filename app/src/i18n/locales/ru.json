@@ -40,26 +40,32 @@
         "icon": "briefcase",
         "children": [
           {
+            "path": "/applingo/games",
+            "label": "Игры",
+            "icon": "security"
+          },
+          {
             "path": "/applingo/betatesting",
             "label": "Бета Тестирование",
             "icon": "security"
+          },
+          {
+            "path": "/applingo/feedback",
+            "label": "Feedback",
+            "icon": "security"
           }
         ]
-      },
-      {
-        "path": "/contribute",
-        "label": "Внести вклад",
-        "icon": "folder"
       }
     ]
   },
-  "send_message": {
+  "form_data": {
     "title": "Связаться с нами",
     "title_betatest": "Присоедениться к тестированию",
+    "title_feedback": "Отправить отзыв",
     "name": "Имя",
     "email": "Email",
     "message": "Сообщение",
-    "submit": "Submit",
+    "submit": "Отправить",
     "errors": {
       "title": "Ошибка",
       "name_required": "Поле обязательно для заполнения",
@@ -69,7 +75,7 @@
     },
     "success": {
       "title": "Спасибо!",
-      "message": "Ваша заявка успешно отправлена"
+      "message": "Ваш запрос успешно отправлен"
     }
   }
 }

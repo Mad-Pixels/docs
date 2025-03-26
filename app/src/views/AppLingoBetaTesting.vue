@@ -17,12 +17,12 @@
         </template>
         <template #column-1>
           <div class="form-content">
-            <h2 id="beta-form" class="section-title">{{ t('send_message.title_betatest') }}</h2>
+            <h2 id="beta-form" class="section-title">{{ t('form_data.title_betatest') }}</h2>
             <FormGrid
               :fields="formFields" 
               :maxColumns=2
               :submitButton="{ 
-                label: t('send_message.submit'),
+                label: t('form_data.submit'),
                 class: 'primary-button',
                 props: { 
                   disabled: isSubmitting 
@@ -83,17 +83,17 @@ const currentLocaleContent = computed(() => {
 
 const logoSrc = computed(() => {
   return themeStore.isDarkTheme ? '/content/applingo_black.jpg' : '/content/applingo_white.jpg'
-})
+}) 
 
 const validateForm = () => {
   errors.value = {};
   if (!formData.value.name) {
-    errors.value.name = t('send_message.errors.name_required')
+    errors.value.name = t('form_data.errors.name_required')
   }
   if (!formData.value.email) {
-    errors.value.email = t('send_message.errors.email_required')
+    errors.value.email = t('form_data.errors.email_required')
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.value.email)) {
-    errors.value.email = t('send_message.errors.email_invalid')
+    errors.value.email = t('form_data.errors.email_invalid')
   }
   return Object.keys(errors.value).length === 0
 }
@@ -104,7 +104,7 @@ const formFields = computed(() => [
     props: {
       modelValue: formData.value.name,
       'onUpdate:modelValue': (v) => formData.value.name = v,
-      label: t('send_message.name'),
+      label: t('form_data.name'),
       name: 'name',
       required: true,
       error: errors.value.name
@@ -115,7 +115,7 @@ const formFields = computed(() => [
     props: {
       modelValue: formData.value.email,
       'onUpdate:modelValue': (v) => formData.value.email = v,
-      label: t('send_message.email'),
+      label: t('form_data.email'),
       type: 'email',
       name: 'email',
       required: true,
@@ -127,7 +127,7 @@ const formFields = computed(() => [
     props: {
       modelValue: formData.value.message,
       'onUpdate:modelValue': (v) => formData.value.message = v,
-      label: t('send_message.message'),
+      label: t('form_data.message'),
       name: 'message',
       rows: 4
     }
@@ -141,11 +141,11 @@ const modalTitle = ref('')
 
 const showNotification = (success) => {
   modalTitle.value = success 
-    ? t('send_message.success.title')
-    : t('send_message.errors.title');
+    ? t('form_data.success.title')
+    : t('form_data.errors.title');
   modalMessage.value = success
-    ? t('send_message.success.message')
-    : t('send_message.errors.send_error')
+    ? t('form_data.success.message')
+    : t('form_data.errors.send_error')
   showModal.value = true;
 }
 
