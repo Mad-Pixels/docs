@@ -48,6 +48,11 @@
             "path": "/applingo/betatesting",
             "label": "Бета Тестирование",
             "icon": "security"
+          },
+          {
+            "path": "/applingo/feedback",
+            "label": "Feedback",
+            "icon": "security"
           }
         ]
       }
