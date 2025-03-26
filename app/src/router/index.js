@@ -5,7 +5,7 @@ import LocaleWrapper from '../components/LocaleWrapper.vue'
 
 import ContentMain from '@/views/MainView.vue'
 import AppLingoBetaTesting from '@/views/AppLingoBetaTesting.vue'
-import AppLingoAbout from '@/views/AppLingoAbout.vue'
+import AppLingoGames from '@/views/AppLingoGames.vue'
 import ContributeGitHubWorkflows from '@/views/ContributeGitHubWorkflows.vue'
 import ContributeCiActions from '@/views/ContributeCiActions.vue'
 import ContributeWf from '@/views/ContributeWf.vue'
@@ -77,11 +77,11 @@ const routes = [
         }
       },
       {
-        path: 'applingo/about',
-        name: 'applingo-about',
-        component: AppLingoAbout,
+        path: 'applingo/games',
+        name: 'applingo-games',
+        component: AppLingoGames,
         meta: {
-          title: 'Applingo About'
+          title: 'Applingo Games'
         }
       },
       {

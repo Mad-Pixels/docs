@@ -40,8 +40,8 @@
         "icon": "briefcase",
         "children": [
           {
-            "path": "/applingo/about",
-            "label": "О приложении",
+            "path": "/applingo/games",
+            "label": "Игры",
             "icon": "security"
           },
           {

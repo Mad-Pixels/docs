@@ -9,8 +9,8 @@
   import { useI18n } from 'vue-i18n'
   
   import PageWrapper from '@/components/PageWrapper.vue'
-  import ContentUS from '@/content/us/ContentAppLingoAbout.vue'
-  import ContentRU from '@/content/ru/ContentAppLingoAbout.vue'
+  import ContentUS from '@/content/us/ContentAppLingoGames.vue'
+  import ContentRU from '@/content/ru/ContentAppLingoGames.vue'
   
   const { locale } = useI18n()
   const currentLocaleContent = computed(() => {
