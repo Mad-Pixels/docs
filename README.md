@@ -6,16 +6,9 @@
         src="https://github.com/Mad-Pixels/.github/raw/main/profile/banner.png">
 </picture>
 
-# app
+# MadPixels Community docs
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+Static multi-language [site](http://docs.madpixels.io) with community docs and instructions.
 
 ## Project Setup
 
@@ -50,3 +43,9 @@ tf_key       = "path/to/state.tfstate"
 acm_crt      = "..."
 aws_region   = "ap-southeast-1"
 ```
+
+# Contributing
+We're open to any new ideas and contributions. We also have some rules and taboos here, so please read this page and our [Code of Conduct](/CODE_OF_CONDUCT.md) carefully.
+
+## I want to report an issue
+If you've found an issue and want to report it, please check our [Issues](https://github.com/Mad-Pixels/docs/issues) page.
